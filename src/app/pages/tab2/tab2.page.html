@@ -1,0 +1,10 @@
+<ion-content>
+  <div class="pictures-wrapper">
+    <app-listview
+      *ngIf="!isEmpty"
+      (pictureEvent)="viewFullPicture($event)"
+      [pictures]="FavoritePictures"
+    ></app-listview>
+    <ion-label class="emptyLabel" color="dark" *ngIf="isEmpty"> No Favorites :( </ion-label>
+  </div>
+</ion-content>

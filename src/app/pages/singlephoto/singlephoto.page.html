@@ -1,0 +1,27 @@
+<ion-content>
+  <div class="view-wrapper">
+    <ion-button fill="clear" slot="start" (click)="goBack()">
+      <ion-icon
+        color="light"
+        slot="icon-only"
+        name="chevron-back-outline"
+      ></ion-icon>
+    </ion-button>
+    <div class="img-wrapper">
+      <img [src]="picture" (load)="imgLoaded()" />
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-button
+      class="RmFavBtn"
+      [disabled]="Buttondisabled"
+      color="light"
+      fill="clear"
+      (click)="removeFavorite()"
+      >Favorite
+      <ion-icon  color="danger" slot="icon-only" name="{{iconName}}"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
